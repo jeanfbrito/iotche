@@ -1,0 +1,33 @@
+version: '3'
+
+services:
+  postgres:
+    image: postgres:10.4-alpine
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    volumes:
+      - ".:/app"
+    ports:
+      - "5432:5432"
+    expose:
+      - "5432"
+
+  web:
+    build: .
+    command: ruby bin/rails s -p 80 -b '0.0.0.0'
+    volumes:
+      - .:/app
+      - bundler_cache:/bundler_cache
+    links:
+      - postgres
+    ports:
+      - "80:80"
+    expose:
+      - "80"
+    tty: true
+    stdin_open: true
+
+volumes:
+  postgres:
+  bundler_cache:
