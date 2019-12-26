@@ -8,7 +8,7 @@ RUN curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add -
 RUN echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list
 
 # Install Rails dependencies for the OS
-RUN apt-get update && apt-get install -y libpq-dev postgresql-client nodejs yarn --no-install-recommends && rm -rf /var/lib/apt/lists/*
+RUN apt-get update && apt-get install -y libpq-dev postgresql-client graphviz nodejs yarn --no-install-recommends && rm -rf /var/lib/apt/lists/*
 
 ENV BUNDLE_PATH /bundler_cache
 ENV GEM_PATH /bundler_cache
