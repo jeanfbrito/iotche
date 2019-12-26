@@ -22,6 +22,14 @@ gem 'jbuilder', '~> 2.7'
 # Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
+# frontend
+gem 'slim', '~> 4.0', '>= 4.0.1'
+gem 'coffee-rails', '~> 5.0'
+gem 'font-awesome-sass', '~> 5.12'
+
+# control pannel
+gem 'rails_admin', '~> 2.0', git: 'https://github.com/sferik/rails_admin.git'
+
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
