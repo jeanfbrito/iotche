@@ -38,4 +38,18 @@ RailsAdmin.config do |config|
     # history_index
     # history_show
   end
+
+  config.model 'Reading' do
+    edit do
+      field :device
+      field :datetime
+      field :data, :json_editor do
+        label 'Reading Data'
+        default_value do
+          [""].to_json
+        end
+        help 'Opcional'
+      end
+    end
+  end
 end
