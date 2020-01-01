@@ -41,6 +41,7 @@ group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'annotate', '~> 3.0', '>= 3.0.3'
   gem 'rails-erd', '~> 1.6'
+  gem 'seed_dump', '~> 3.3', '>= 3.3.1'
 end
 
 group :development do
