@@ -15,7 +15,7 @@ services:
 
   web:
     build: .
-    command: ruby bin/rails s -p 80 -b '0.0.0.0'
+    command: sh ./server_start.sh
     volumes:
       - .:/app
       - bundler_cache:/bundler_cache
